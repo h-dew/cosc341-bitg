@@ -3,6 +3,12 @@
     <style name="Base.Theme.Cosc341bitg" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/burgundy_light</item>
+        <item name="colorOnPrimary">@color/cream</item>
+        <item name="colorSurface">@color/cream</item>
+        <item name="colorOnSurface">@color/burgundy_dark</item>
+        <item name="colorOnSurfaceVariant">@color/black</item>
+        <item name="colorSurfaceContainer">@color/cream_dark</item>
     </style>
 
     <style name="Theme.Cosc341bitg" parent="Base.Theme.Cosc341bitg" />
