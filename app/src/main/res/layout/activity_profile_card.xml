@@ -1,49 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:background="@color/md_theme_background">
 
-    <!-- Top bar -->
-    <LinearLayout
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingStart="8dp"
-        android:paddingEnd="16dp"
-        android:background="#FFFFFF"
-        android:elevation="4dp"
-        android:layout_marginTop="36dp">
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="36dp"
+        style="@style/Widget.Material3.Toolbar">
 
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@drawable/back"
+            android:padding="8dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="Back"/>
 
         <TextView
             android:id="@+id/tvToolbarTitle"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Profile"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#333333"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
             android:layout_marginStart="8dp"/>
 
-    </LinearLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
 
-    <View
+    <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#EEEEEE"/>
+        android:layout_height="wrap_content"/>
 
-    <!-- Rest of your profile card content in a ScrollView -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -54,37 +46,41 @@
             android:orientation="vertical"
             android:padding="24dp">
 
-            <FrameLayout
+            <!-- Profile photo -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="#FFEEEE"
-                android:layout_marginBottom="16dp">
+                android:layout_height="220dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/md_theme_primaryContainer"
+                app:strokeWidth="0dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="👤"
-                    android:textSize="64sp"/>
-            </FrameLayout>
+                    android:textSize="72sp"/>
+
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:id="@+id/tvProfileName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name, Age"
-                android:textSize="26sp"
-                android:textStyle="bold"
-                android:textColor="#333333"
-                android:layout_marginBottom="8dp"/>
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                android:textColor="@color/md_theme_onBackground"
+                android:layout_marginBottom="6dp"/>
 
             <TextView
                 android:id="@+id/tvProfileLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="📍 Location"
-                android:textSize="16sp"
-                android:textColor="#888888"
+                android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                android:textColor="@color/md_theme_onSurfaceVariant"
                 android:layout_marginBottom="8dp"/>
 
             <TextView
@@ -92,8 +88,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Interests"
-                android:textSize="16sp"
-                android:textColor="#555555"
+                android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                android:textColor="@color/md_theme_onSurface"
                 android:layout_marginBottom="8dp"/>
 
             <TextView
@@ -101,56 +97,64 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bio"
-                android:textSize="15sp"
-                android:textColor="#666666"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                android:textColor="@color/md_theme_onSurfaceVariant"
                 android:layout_marginBottom="32dp"/>
 
+            <!-- Connect / Pass -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="12dp">
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnConnect"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="52dp"
                     android:layout_weight="1"
-                    android:text="✓ Connect"
-                    android:backgroundTint="#4CAF50"
+                    android:text="Connect"
+                    android:textSize="15sp"
+                    app:icon="@drawable/ic_check"
+                    style="@style/Widget.Material3.Button"
                     android:layout_marginEnd="8dp"/>
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnPass"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="52dp"
                     android:layout_weight="1"
-                    android:text="✕ Pass"
-                    android:backgroundTint="#F44336"/>
+                    android:text="Pass"
+                    android:textSize="15sp"
+                    app:icon="@drawable/ic_close"
+                    style="@style/Widget.Material3.Button.OutlinedButton"/>
 
             </LinearLayout>
 
+            <!-- Report / Block -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnReport"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:text="⚑ Report"
-                    android:backgroundTint="#FF9800"
+                    android:text="Report"
+                    android:textSize="14sp"
+                    style="@style/Widget.Material3.Button.TextButton"
                     android:layout_marginEnd="8dp"/>
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnBlock"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:text="⊘ Block"
-                    android:backgroundTint="#9E9E9E"/>
+                    android:text="Block"
+                    android:textSize="14sp"
+                    style="@style/Widget.Material3.Button.TextButton"/>
 
             </LinearLayout>
 

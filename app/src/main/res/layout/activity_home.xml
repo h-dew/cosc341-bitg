@@ -4,15 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="32dp"
-    android:background="@color/md_theme_onPrimary">
+    android:background="@color/md_theme_background">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SeniorsVibe"
-        android:textSize="28sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="#E91E8C"
+        android:textColor="@color/md_theme_primary"
         android:layout_marginBottom="4dp"
         android:layout_marginTop="48dp"/>
 
@@ -22,24 +22,24 @@
         android:layout_height="wrap_content"
         android:text="Hello!"
         android:textSize="22sp"
-        android:textColor="#333333"
+        android:textColor="@color/md_theme_onBackground"
         android:layout_marginBottom="48dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnMatches"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="60dp"
         android:text="Browse Matches"
-        android:textSize="18sp"
-        android:backgroundTint="#E91E8C"
-        android:layout_marginBottom="20dp"/>
+        android:textSize="17sp"
+        style="@style/Widget.Material3.Button"
+        android:layout_marginBottom="16dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnMessages"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="60dp"
         android:text="Messages"
-        android:textSize="18sp"
-        android:backgroundTint="#888888"/>
+        android:textSize="17sp"
+        style="@style/Widget.Material3.Button.TonalButton"/>
 
 </LinearLayout>

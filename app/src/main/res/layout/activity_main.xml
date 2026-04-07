@@ -6,38 +6,41 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="32dp"
-    android:background="@color/md_theme_onPrimary">
+    android:background="@color/md_theme_background">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SeniorsVibe"
-        android:textSize="32sp"
+        android:textSize="36sp"
         android:textStyle="bold"
-        android:textColor="#E91E8C"
-        android:layout_marginBottom="8dp"/>
+        android:textColor="@color/md_theme_primary"
+        android:layout_marginBottom="8dp"
+        android:letterSpacing="0.02"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dating &amp; Companionship for Seniors"
-        android:textSize="14sp"
-        android:textColor="#888888"
-        android:layout_marginBottom="60dp"/>
+        android:textSize="15sp"
+        android:textColor="@color/md_theme_onSurfaceVariant"
+        android:layout_marginBottom="64dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:text="Sign Up"
-        android:backgroundTint="#E91E8C"
-        android:layout_marginBottom="16dp"/>
+        android:textSize="16sp"
+        style="@style/Widget.Material3.Button"
+        android:layout_marginBottom="12dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogIn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:text="Log In"
-        android:backgroundTint="#888888"/>
+        android:textSize="16sp"
+        style="@style/Widget.Material3.Button.OutlinedButton"/>
 
 </LinearLayout>
