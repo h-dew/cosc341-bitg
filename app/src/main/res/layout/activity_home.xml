@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="32dp"
     android:background="@color/md_theme_onPrimary">
 
@@ -12,32 +10,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SeniorsVibe"
-        android:textSize="32sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="#E91E8C"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="4dp"/>
 
     <TextView
+        android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dating &amp; Companionship for Seniors"
-        android:textSize="14sp"
-        android:textColor="#888888"
-        android:layout_marginBottom="60dp"/>
+        android:text="Hello!"
+        android:textSize="22sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="48dp"/>
 
     <Button
-        android:id="@+id/btnSignUp"
+        android:id="@+id/btnMatches"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
+        android:layout_height="64dp"
+        android:text="Browse Matches"
+        android:textSize="18sp"
         android:backgroundTint="#E91E8C"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="20dp"/>
 
     <Button
-        android:id="@+id/btnLogIn"
+        android:id="@+id/btnMessages"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Log In"
+        android:layout_height="64dp"
+        android:text="Messages"
+        android:textSize="18sp"
         android:backgroundTint="#888888"/>
 
 </LinearLayout>

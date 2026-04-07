@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/md_theme_onPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Step 2 of 3"
+        android:textSize="12sp"
+        android:textColor="#888888"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progress="66"
+        android:max="100"
+        android:progressTint="#E91E8C"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Your Interests"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Row 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <CheckBox
+            android:id="@+id/cbMusic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Music"
+            android:button="@null"
+            android:background="@drawable/interest_checkbox_bg"
+            android:gravity="center"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <CheckBox
+            android:id="@+id/cbReading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reading"
+            android:button="@null"
+            android:background="@drawable/interest_checkbox_bg"
+            android:gravity="center"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+    <!-- Row 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <CheckBox
+            android:id="@+id/cbWalking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Walking"
+            android:button="@null"
+            android:background="@drawable/interest_checkbox_bg"
+            android:gravity="center"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <CheckBox
+            android:id="@+id/cbCooking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cooking"
+            android:button="@null"
+            android:background="@drawable/interest_checkbox_bg"
+            android:gravity="center"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+    <!-- Row 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="32dp">
+
+        <CheckBox
+            android:id="@+id/cbGardening"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gardening"
+            android:button="@null"
+            android:background="@drawable/interest_checkbox_bg"
+            android:gravity="center"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <CheckBox
+            android:id="@+id/cbTravel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Travel"
+            android:button="@null"
+            android:background="@drawable/interest_checkbox_bg"
+            android:gravity="center"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:backgroundTint="#E91E8C"/>
+
+</LinearLayout>

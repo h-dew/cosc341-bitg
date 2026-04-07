@@ -20,6 +20,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".OnboardingStep1Activity"/>
+        <activity android:name=".OnboardingStep2Activity"/>
+        <activity android:name=".OnboardingStep3Activity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".HomeActivity"/>
+        <activity android:name=".MatchFeedActivity"/>
+        <activity android:name=".InboxActivity"/>
     </application>
 
 </manifest>

@@ -1,6 +1,8 @@
 package com.example.cosc341_bitg;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,12 +15,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        Button btnSignUp = findViewById(R.id.btnSignUp);
+        Button btnLogIn = findViewById(R.id.btnLogIn);
+
+        btnSignUp.setOnClickListener(v -> {
+            Intent intent = new Intent(this, OnboardingStep1Activity.class);
+            startActivity(intent);
+        });
+
+        btnLogIn.setOnClickListener(v -> {
+            // For now, also go to step 1 — hook up later
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
         });
     }
 }
