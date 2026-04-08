@@ -26,11 +26,13 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".HomeActivity"/>
         <activity android:name=".MatchFeedActivity"/>
+        <activity android:name=".ConversationActivity" />
         <activity android:name=".InboxActivity"/>
         <activity android:name=".ProfileCardActivity"
             android:parentActivityName=".MatchFeedActivity"/>
         <activity android:name=".ConnectedConfirmationActivity"
-            android:parentActivityName=".ProfileCardActivity"/>
+            android:parentActivityName=".ProfileCardActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ReportActivity"
             android:parentActivityName=".ProfileCardActivity"/>
     </application>
