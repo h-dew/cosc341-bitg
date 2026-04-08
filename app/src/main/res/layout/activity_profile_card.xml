@@ -3,38 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/md_theme_background">
+    android:background="@color/md_theme_background"
+    android:orientation="vertical">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
+        style="@style/Widget.Material3.Toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginTop="36dp"
-        style="@style/Widget.Material3.Toolbar">
+        android:layout_marginTop="36dp">
 
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@drawable/back"
-            android:padding="8dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Back"/>
+            android:contentDescription="Back"
+            android:padding="8dp"
+            android:src="@drawable/back" />
 
         <TextView
             android:id="@+id/tvToolbarTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:text="Profile"
-            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-            android:layout_marginStart="8dp"/>
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge" />
 
     </com.google.android.material.appbar.MaterialToolbar>
 
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -50,18 +50,18 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                app:cardCornerRadius="16dp"
+                android:layout_marginBottom="20dp"
                 app:cardBackgroundColor="@color/md_theme_primaryContainer"
-                app:strokeWidth="0dp"
+                app:cardCornerRadius="16dp"
                 app:cardElevation="0dp"
-                android:layout_marginBottom="20dp">
+                app:strokeWidth="0dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="👤"
-                    android:textSize="72sp"/>
+                    android:textSize="72sp" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -69,65 +69,65 @@
                 android:id="@+id/tvProfileName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
                 android:text="Name, Age"
                 android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
-                android:textColor="@color/md_theme_onBackground"
-                android:layout_marginBottom="6dp"/>
+                android:textColor="@color/md_theme_onBackground" />
 
             <TextView
                 android:id="@+id/tvProfileLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="📍 Location"
                 android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-                android:textColor="@color/md_theme_onSurfaceVariant"
-                android:layout_marginBottom="8dp"/>
+                android:textColor="@color/md_theme_onSurfaceVariant" />
 
             <TextView
                 android:id="@+id/tvProfileInterests"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="Interests"
                 android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-                android:textColor="@color/md_theme_onSurface"
-                android:layout_marginBottom="8dp"/>
+                android:textColor="@color/md_theme_onSurface" />
 
             <TextView
                 android:id="@+id/tvProfileBio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
                 android:text="Bio"
                 android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-                android:textColor="@color/md_theme_onSurfaceVariant"
-                android:layout_marginBottom="32dp"/>
+                android:textColor="@color/md_theme_onSurfaceVariant" />
 
             <!-- Connect / Pass -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnConnect"
+                    style="@style/Widget.Material3.Button"
                     android:layout_width="0dp"
                     android:layout_height="52dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     android:text="Connect"
                     android:textSize="15sp"
-                    app:icon="@drawable/ic_check"
-                    style="@style/Widget.Material3.Button"
-                    android:layout_marginEnd="8dp"/>
+                    app:icon="@drawable/ic_check" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnPass"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
                     android:layout_width="0dp"
                     android:layout_height="52dp"
                     android:layout_weight="1"
                     android:text="Pass"
                     android:textSize="15sp"
-                    app:icon="@drawable/ic_close"
-                    style="@style/Widget.Material3.Button.OutlinedButton"/>
+                    app:icon="@drawable/ic_close" />
 
             </LinearLayout>
 
@@ -139,22 +139,22 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnReport"
+                    style="@style/Widget.Material3.Button.TextButton"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     android:text="Report"
-                    android:textSize="14sp"
-                    style="@style/Widget.Material3.Button.TextButton"
-                    android:layout_marginEnd="8dp"/>
+                    android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnBlock"
+                    style="@style/Widget.Material3.Button.TextButton"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
                     android:text="Block"
-                    android:textSize="14sp"
-                    style="@style/Widget.Material3.Button.TextButton"/>
+                    android:textSize="14sp" />
 
             </LinearLayout>
 

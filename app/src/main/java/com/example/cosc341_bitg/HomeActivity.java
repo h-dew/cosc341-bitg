@@ -27,12 +27,16 @@ public class HomeActivity extends AppCompatActivity {
 
         Button btnMatches = findViewById(R.id.btnMatches);
         Button btnMessages = findViewById(R.id.btnMessages);
+        Button btnEvents = findViewById(R.id.btnEvents);
 
         btnMatches.setOnClickListener(v ->
                 startActivity(new Intent(this, MatchFeedActivity.class)));
 
         btnMessages.setOnClickListener(v ->
                 startActivity(new Intent(this, InboxActivity.class)));
+
+        btnEvents.setOnClickListener(v ->
+                startActivity(new Intent(this, EventsActivity.class)));
     }
 
     @Override
