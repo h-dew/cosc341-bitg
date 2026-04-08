@@ -42,7 +42,7 @@
                 android:src="@drawable/back"
                 android:padding="14dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:tint="@color/md_theme_onSurface"/>
+                app:tint="@color/md_theme_onSurface"/>
 
             <!-- Avatar circle — larger for legibility -->
             <com.google.android.material.card.MaterialCardView

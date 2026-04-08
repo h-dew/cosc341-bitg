@@ -78,7 +78,7 @@
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:src="@drawable/ic_chevron_right"
-            android:tint="@color/md_theme_onSurfaceVariant"/>
+            app:tint="@color/md_theme_onSurfaceVariant"/>
 
     </LinearLayout>
 
