@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="32dp"
-    android:background="#FFFFFF">
+    android:background="@color/md_theme_background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="✓"
-        android:textSize="64sp"
-        android:textColor="#4CAF50"
-        android:layout_marginBottom="16dp"/>
+    <!-- Success icon in a tonal container -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        app:cardCornerRadius="48dp"
+        app:cardBackgroundColor="@color/md_theme_primaryContainer"
+        app:strokeWidth="0dp"
+        app:cardElevation="0dp"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="✓"
+            android:textSize="44sp"
+            android:textColor="@color/md_theme_onPrimaryContainer"/>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/tvConfirmMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Request sent!"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#333333"
+        android:text="Request Sent!"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+        android:textColor="@color/md_theme_onBackground"
         android:gravity="center"
         android:layout_marginBottom="8dp"/>
 
@@ -31,16 +43,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="She will be notified."
-        android:textSize="16sp"
-        android:textColor="#888888"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:textColor="@color/md_theme_onSurfaceVariant"
         android:gravity="center"
-        android:layout_marginBottom="40dp"/>
+        android:layout_marginBottom="48dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBackToMatches"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:text="Back to Matches"
-        android:backgroundTint="#E91E8C"/>
+        android:textSize="16sp"
+        style="@style/Widget.Material3.Button"/>
 
 </LinearLayout>

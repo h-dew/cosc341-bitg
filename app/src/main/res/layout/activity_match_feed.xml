@@ -3,54 +3,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:background="@color/md_theme_background">
 
-    <!-- Top bar with home button and title -->
-    <LinearLayout
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingStart="8dp"
-        android:paddingEnd="16dp"
-        android:background="#FFFFFF"
-        android:elevation="4dp"
-        android:layout_marginTop="36dp">
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="36dp"
+        style="@style/Widget.Material3.Toolbar">
 
         <ImageButton
             android:id="@+id/btnHome"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:src="@drawable/back"
             android:padding="8dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="Home"/>
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Today's Matches"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#333333"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
             android:layout_marginStart="8dp"/>
 
-    </LinearLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
 
-    <!-- Divider -->
-    <View
+    <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#EEEEEE"/>
+        android:layout_height="wrap_content"/>
 
     <ListView
         android:id="@+id/listViewMatches"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="#EEEEEE"
-        android:dividerHeight="1dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:clipToPadding="false"/>
 
 </LinearLayout>
