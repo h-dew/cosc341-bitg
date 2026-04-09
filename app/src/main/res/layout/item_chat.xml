@@ -6,8 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="6dp"
-    app:cardElevation="1dp"
     app:cardCornerRadius="16dp"
+    app:cardElevation="1dp"
     app:strokeWidth="0dp"
     app:cardBackgroundColor="@color/md_theme_surfaceContainerLow">
 
@@ -20,7 +20,7 @@
         android:gravity="center_vertical"
         android:minHeight="80dp">
 
-        <!-- Avatar -->
+        <!-- Avatar circle — larger for easy recognition -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="64dp"
             android:layout_height="64dp"
@@ -30,14 +30,17 @@
             app:cardElevation="0dp">
 
             <TextView
+                android:id="@+id/tvChatAvatar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="👤"
-                android:textSize="28sp"/>
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_onPrimaryContainer"/>
 
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Name + preview -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -46,39 +49,64 @@
             android:layout_marginStart="18dp">
 
             <TextView
-                android:id="@+id/tvMatchName"
+                android:id="@+id/tvChatName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name, Age"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/md_theme_onSurface"
                 android:layout_marginBottom="4dp"/>
 
             <TextView
-                android:id="@+id/tvMatchInterests"
+                android:id="@+id/tvChatPreview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Interests"
                 android:textSize="16sp"
                 android:textColor="@color/md_theme_onSurfaceVariant"
-                android:layout_marginBottom="2dp"/>
-
-            <TextView
-                android:id="@+id/tvMatchLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Location"
-                android:textSize="16sp"
-                android:textColor="@color/md_theme_onSurfaceVariant"/>
+                android:maxLines="1"
+                android:ellipsize="end"/>
 
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:src="@drawable/ic_chevron_right"
-            app:tint="@color/md_theme_onSurfaceVariant"/>
+        <!-- Time + unread badge -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/tvChatTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/md_theme_onSurfaceVariant"
+                android:layout_marginBottom="6dp"/>
+
+            <!-- Unread badge — wider to comfortably fit the number -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvUnreadBadge"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                app:cardCornerRadius="14dp"
+                app:cardBackgroundColor="@color/md_theme_primary"
+                app:strokeWidth="0dp"
+                app:cardElevation="0dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvUnreadCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/md_theme_onPrimary"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
 
     </LinearLayout>
 

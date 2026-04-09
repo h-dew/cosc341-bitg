@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Two bubble types toggled by the adapter: incoming (left) and outgoing (right).
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="14dp"
+    android:paddingVertical="5dp">
+
+    <!-- INCOMING bubble (left-aligned) -->
+    <LinearLayout
+        android:id="@+id/layoutIncoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        android:visibility="gone">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/md_theme_surfaceContainerHigh"
+            app:strokeWidth="0dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/tvMessageIncoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="14dp"
+                android:textSize="18sp"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@color/md_theme_onSurface"
+                android:maxWidth="300dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvTimeIncoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="13sp"
+            android:textColor="@color/md_theme_onSurfaceVariant"/>
+
+    </LinearLayout>
+
+    <!-- OUTGOING bubble (right-aligned) -->
+    <LinearLayout
+        android:id="@+id/layoutOutgoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:visibility="gone">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/md_theme_primaryContainer"
+            app:strokeWidth="0dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/tvMessageOutgoing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="14dp"
+                android:textSize="18sp"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@color/md_theme_onPrimaryContainer"
+                android:maxWidth="300dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvTimeOutgoing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="13sp"
+            android:textColor="@color/md_theme_onSurfaceVariant"/>
+
+    </LinearLayout>
+
+</LinearLayout>

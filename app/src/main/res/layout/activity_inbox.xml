@@ -1,16 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="@color/md_theme_background">
+    android:background="@color/md_theme_background"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Messages — Coming Soon"
-        android:textSize="20sp"
-        android:textColor="@color/md_theme_onSurfaceVariant"
-        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
+        android:orientation="vertical"
+        android:background="@color/md_theme_surfaceContainerHigh"
+        android:paddingBottom="16dp"
+        android:elevation="4dp">
+
+        <!-- Status bar spacer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="36dp"/>
+
+        <!-- Greeting + title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Good afternoon"
+                android:textSize="17sp"
+                android:textColor="@color/md_theme_onSurfaceVariant"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Messages"
+                android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+                android:textSize="36sp"
+                android:textColor="@color/md_theme_onSurface"/>
+
+        </LinearLayout>
+
+        <!-- Filter chips — min touch height 48dp -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:paddingHorizontal="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="All"
+                    android:textSize="16sp"
+                    android:checked="true"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_marginEnd="10dp"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipUnread"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Unread"
+                    android:textSize="16sp"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_marginEnd="10dp"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipRecent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Recent"
+                    android:textSize="16sp"
+                    style="@style/Widget.Material3.Chip.Filter"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewChats"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:clipToPadding="false"/>
 
 </LinearLayout>

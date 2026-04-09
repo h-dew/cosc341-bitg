@@ -45,7 +45,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="12dp"
-        app:cardBackgroundColor="@color/md_theme_surfaceContainerLow"
         app:strokeWidth="0dp"
         app:cardElevation="0dp"
         android:layout_marginBottom="32dp">
