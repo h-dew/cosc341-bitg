@@ -8,28 +8,28 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import java.util.List;
 
-public class MatchAdapter extends ArrayAdapter<Match> {
+public class EventAdapter extends ArrayAdapter<Event> {
 
-    public MatchAdapter(Context context, List<Match> matches) {
-        super(context, 0, matches);
+    public EventAdapter(Context context, List<Event> events) {
+        super(context, 0, events);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext())
-                    .inflate(R.layout.item_match, parent, false);
+                    .inflate(R.layout.item_event, parent, false);
         }
 
-        Match match = getItem(position);
+        Event event = getItem(position);
 
         TextView tvName = convertView.findViewById(R.id.tvMatchName);
-        TextView tvInterests = convertView.findViewById(R.id.tvMatchDate);
+        TextView tvDate = convertView.findViewById(R.id.tvMatchDate);
         TextView tvLocation = convertView.findViewById(R.id.tvMatchLocation);
 
-        tvName.setText(match.name + ", " + match.age);
-        tvInterests.setText("Interests: " + match.interests);
-        tvLocation.setText("📍 " + match.location);
+        tvName.setText(event.name);
+        tvDate.setText("🗓️ " + event.date);
+        tvLocation.setText("📍 " + event.location);
 
         return convertView;
     }
