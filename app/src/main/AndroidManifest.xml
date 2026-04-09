@@ -36,6 +36,11 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".MatchFeedActivity" />
         <activity android:name=".ConversationActivity" />
+        <activity android:name=".InboxActivity"/>
+        <activity android:name=".ProfileCardActivity"
+            android:parentActivityName=".MatchFeedActivity"/>
+        <activity android:name=".EditProfileActivity"/>
+        <activity android:name=".ConnectedConfirmationActivity"
         <activity android:name=".InboxActivity" />
         <activity
             android:name=".ProfileCardActivity"
