@@ -27,9 +27,8 @@ public class HomeActivity extends AppCompatActivity {
 
         Button btnMatches = findViewById(R.id.btnMatches);
         Button btnMessages = findViewById(R.id.btnMessages);
-        Button btnProfile = findViewById(R.id.btnProfile);
+        Button btnProfile = findViewById(R.id.btnEditProfile);
         Button btnEvents = findViewById(R.id.btnEvents);
-        Button btnEditProfile = findViewById(R.id.btnEditProfile);
 
         btnMatches.setOnClickListener(v ->
                 startActivity(new Intent(this, MatchFeedActivity.class)));
@@ -41,9 +40,6 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(this, EditProfileActivity.class)));
         btnEvents.setOnClickListener(v ->
                 startActivity(new Intent(this, EventsActivity.class)));
-
-        btnEditProfile.setOnClickListener(v ->
-                startActivity(new Intent(this, EditProfileActivity.class)));
     }
 
     @Override

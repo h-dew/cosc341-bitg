@@ -70,17 +70,6 @@
             android:layout_height="68dp"
             android:layout_marginBottom="16dp"
             android:text="Messages"
-            android:textSize="20sp"
-            style="@style/Widget.Material3.Button"
-            android:layout_marginBottom="16dp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnProfile"
-            android:layout_width="match_parent"
-            android:layout_height="68dp"
-            android:text="Edit Profile"
-            android:textSize="20sp"
-            style="@style/Widget.Material3.Button
             android:textSize="20sp" />
 
         <com.google.android.material.button.MaterialButton
