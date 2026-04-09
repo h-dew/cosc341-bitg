@@ -29,14 +29,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OnboardingStep1Activity" />
-        <activity android:name=".OnboardingStep2Activity" />
-        <activity android:name=".OnboardingStep3Activity" />
+        <activity android:name=".OnboardingStep1Activity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".OnboardingStep2Activity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".OnboardingStep3Activity"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".MatchFeedActivity" />
         <activity android:name=".ConversationActivity" />
         <activity android:name=".InboxActivity" />
+        <activity android:name=".EditProfileActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ProfileCardActivity"
             android:parentActivityName=".MatchFeedActivity" />

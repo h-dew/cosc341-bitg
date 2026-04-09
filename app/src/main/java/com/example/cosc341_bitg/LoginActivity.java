@@ -34,6 +34,10 @@ public class LoginActivity extends AppCompatActivity {
             String savedPassword = prefs.getString("password", "");
 
             if (name.equals(savedName) && password.equals(savedPassword)) {
+                SharedPreferences.Editor editor = getSharedPreferences("UserPrefs", MODE_PRIVATE).edit();
+                editor.putBoolean("logged_in", true);
+                editor.apply();
+
                 // Login success — go to main app (for now back to step 2)
                 Intent intent = new Intent(this, HomeActivity.class);
                 startActivity(intent);

@@ -104,23 +104,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Choose a Password"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        app:passwordToggleEnabled="true"
-        android:layout_marginBottom="32dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:imeOptions="actionDone"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnNext1"
         android:layout_width="match_parent"

@@ -1,6 +1,7 @@
 package com.example.cosc341_bitg;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
@@ -23,8 +24,17 @@ public class OnboardingStep3Activity extends AppCompatActivity {
             Toast.makeText(this, "Account created! Please log in.", Toast.LENGTH_LONG).show();
             // Go back to login, clear the back stack so they can't go back to onboarding
             Intent intent = new Intent(this, LoginActivity.class);
+            Intent home = new Intent(this, HomeActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
+
+            SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+            boolean loggedIn = prefs.getBoolean("logged_in", false);
+
+            if(loggedIn){
+                startActivity(home);
+            } else {
+                startActivity(intent);
+            }
         });
     }
 

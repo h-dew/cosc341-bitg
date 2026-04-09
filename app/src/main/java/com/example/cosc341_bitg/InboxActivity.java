@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -68,9 +69,13 @@ public class InboxActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inbox);
 
-        // Greeting
-        TextView tvGreeting = findViewById(R.id.tvGreeting);
-        tvGreeting.setText(getGreeting());
+        // Home button
+        ImageButton btnHome = findViewById(R.id.btnHome);
+        btnHome.setOnClickListener(v -> {
+            Intent intent = new Intent(this, HomeActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        });
 
         // List
         ListView listView = findViewById(R.id.listViewChats);
