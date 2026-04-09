@@ -32,7 +32,7 @@ public class MatchFeedActivity extends AppCompatActivity {
         matches.add(new Match("James", 70, "Kelowna, BC", "Walking, Travel", "Retired teacher who enjoys hiking the local trails."));
 
         MatchAdapter adapter = new MatchAdapter(this, matches);
-        ListView listView = findViewById(R.id.listViewMatches);
+        ListView listView = findViewById(R.id.listViewEvents);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener((parent, view, position, id) -> {

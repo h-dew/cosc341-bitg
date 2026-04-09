@@ -28,10 +28,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SeniorsVibe"
-                android:textSize="17sp"
+                android:layout_marginBottom="4dp"
+                android:text="Back in the Game"
                 android:textColor="@color/md_theme_primary"
-                android:layout_marginBottom="4dp"/>
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/tvWelcome"
@@ -65,8 +65,10 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnMessages"
+            style="@style/Widget.Material3.Button"
             android:layout_width="match_parent"
             android:layout_height="68dp"
+            android:layout_marginBottom="16dp"
             android:text="Messages"
             android:textSize="20sp"
             style="@style/Widget.Material3.Button"
@@ -78,7 +80,17 @@
             android:layout_height="68dp"
             android:text="Edit Profile"
             android:textSize="20sp"
-            style="@style/Widget.Material3.Button"/>
+            style="@style/Widget.Material3.Button
+            android:textSize="20sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEvents"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginBottom="16dp"
+            android:text="Events"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
