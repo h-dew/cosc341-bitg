@@ -11,12 +11,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SeniorsVibe"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:textColor="@color/md_theme_primary"
         android:layout_marginBottom="8dp"
-        android:letterSpacing="0.02"/>
+        android:letterSpacing="0.02"
+        android:text="Back in the Game"
+        android:textColor="@color/md_theme_primary"
+        android:textSize="36sp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"

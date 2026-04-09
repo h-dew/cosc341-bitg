@@ -12,7 +12,10 @@
         android:layout_height="wrap_content"
         android:text="Step 1 of 3"
         android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+<<<<<<< HEAD
         android:layout_marginTop="24dp"
+=======
+>>>>>>> origin/main
         android:textColor="@color/md_theme_onSurfaceVariant"
         android:layout_marginBottom="8dp"/>
 
